@@ -1,5 +1,3 @@
-# AulaProgramacaoWeb
-
 # Conecta+ — Plataforma para ONGs (Unidade I)
 
 ## Visão Geral
