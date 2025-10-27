@@ -1,11 +1,102 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ainda nada</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Plataforma para ONGs — missão, projetos, voluntariado e doações." />
+  <title>Conecta+ ONGs — Início</title>
+
+  <!-- Open Graph / Twitter meta (SEO básica) -->
+  <meta property="og:title" content="Conecta+ ONGs" />
+  <meta property="og:description" content="Plataforma que ajuda ONGs a divulgar projetos, captar recursos e engajar voluntários." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    
+  <a class="skiplink" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Conecta Mais - Página inicial">Conecta+</a>
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Fortalecendo ONGs. Mobilizando pessoas.</h1>
+        <p>Conecta+ ajuda organizações a gerenciar projetos, captar recursos e engajar voluntários de forma transparente.</p>
+        <p>
+          <a class="btn" href="projetos.html">Ver projetos</a>
+          <a class="btn ghost" href="cadastro.html">Quero ajudar</a>
+        </p>
+      </div>
+      <div class="hero-media" role="img" aria-label="Voluntários compartilhando atividades">
+        <img src="assets/images/hero.webp" alt="Voluntários trabalhando em um projeto comunitário" loading="lazy">
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">Sobre a organização</h2>
+      <p>Missão: Promover inclusão social por meio de iniciativas comunitárias. Visão: Ser referência em transparência e impacto social.</p>
+
+      <div class="cards">
+        <article class="card" aria-labelledby="card-01">
+          <h3 id="card-01">Projetos</h3>
+          <p>Cadastro detalhado e indicadores de impacto para cada projeto.</p>
+        </article>
+        <article class="card" aria-labelledby="card-02">
+          <h3 id="card-02">Voluntariado</h3>
+          <p>Portal com oportunidades, histórico e certificados digitais.</p>
+        </article>
+        <article class="card" aria-labelledby="card-03">
+          <h3 id="card-03">Doações</h3>
+          <p>Campanhas, metas e prestação de contas em tempo real.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact" aria-labelledby="impact-title">
+      <h2 id="impact-title">Nossos números</h2>
+      <ul class="metrics" role="list">
+        <li><strong>1200+</strong><span>Voluntários</span></li>
+        <li><strong>75</strong><span>Projetos</span></li>
+        <li><strong>R$ 420.000</strong><span>Captados</span></li>
+      </ul>
+    </section>
+
+    <section id="contato" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contato</h2>
+      <address>
+        <p>Rua Exemplo, 123 — Bairro — Cidade/UF</p>
+        <p>Email: <a href="mailto:contato@conecta.org.br">contato@conecta.org.br</a></p>
+        <p>Telefone: <a href="tel:+5511999999999">+55 (11) 99999-9999</a></p>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Conecta+. <a href="projetos.html">Projetos</a> • <a href="cadastro.html">Cadastro</a></p>
+      <nav aria-label="Redes sociais">
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook">FB</a></li>
+          <li><a href="#" aria-label="Instagram">IG</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
