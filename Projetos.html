@@ -1,1 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Lista de projetos sociais — Conecta+ ONGs" />
+  <title>Projetos — Conecta+</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skiplink" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Conecta+</a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <header class="page-header">
+      <h1>Projetos Sociais</h1>
+      <p>Conheça nossos projetos, indicadores e como participar como voluntário ou doador.</p>
+    </header>
+
+    <section class="projects-list" aria-labelledby="projects-title">
+      <h2 id="projects-title">Filtrar por categoria</h2>
+      <form class="filters" aria-label="Filtrar projetos">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+          <option value="">Todas</option>
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="meio-ambiente">Meio Ambiente</option>
+        </select>
+      </form>
+
+      <ul class="project-cards" role="list">
+        <li class="project-card" aria-labelledby="proj-1-title">
+          <img src="assets/imagens/Alfabetizacao.jpeg" alt="Imagem do projeto A" loading="lazy">
+          <div class="project-body">
+            <h3 id="proj-1-title">Projeto Alfabetiza</h3>
+            <p>Objetivo: alfabetizar jovens e adultos. Indicadores: 85% concluíram o curso.</p>
+            <p><a href="cadastro.html" class="btn">Quero voluntariar</a> <a href="#" class="btn ghost">Doar</a></p>
+          </div>
+        </li>
+
+        <li class="project-card" aria-labelledby="proj-2-title">
+          <img src="assets/imagens/Horta-comunitaria.jpg" alt="Imagem do projeto B" loading="lazy">
+          <div class="project-body">
+            <h3 id="proj-2-title">Horta Comunitária</h3>
+            <p>Objetivo: segurança alimentar e educação ambiental.</p>
+            <p><a href="cadastro.html" class="btn">Inscrever-se</a> <a href="#" class="btn ghost">Doar</a></p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <aside class="sidebar" aria-labelledby="impact-articles">
+      <h2 id="impact-articles">Transparência</h2>
+      <p>Relatórios trimestrais e prestação de contas disponíveis para download.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-2"></span> Conecta+</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
 
