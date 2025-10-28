@@ -20,7 +20,7 @@
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Conecta Mais - Página inicial">Conecta+</a>
       <nav class="main-nav" role="navigation" aria-label="Menu principal">
-        <ul>
+        <ul id="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
@@ -42,7 +42,7 @@
         </p>
       </div>
       <div class="hero-media" role="img" aria-label="Voluntários compartilhando atividades">
-        <img src="assets/imagens/trabalho-voluntario.jpg" alt="Voluntários trabalhando em um projeto comunitário" loading="lazy">
+        <img srcset="assets/imagens/trabalho-voluntario.jpg" alt="Voluntários trabalhando em um projeto comunitário" loading="lazy">
       </div>
     </section>
 
@@ -98,5 +98,16 @@
   </footer>
 
   <script src="assets/js/main.js" defer></script>
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    menu.classList.toggle('active');
+  });
+  </script>
+
 </body>
 </html>

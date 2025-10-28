@@ -51,3 +51,38 @@ input, select, textarea { width:100%; padding:.6rem; border:1px solid #dcdcdc; b
   .hero { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; align-items:center; }
   .project-cards { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Esconde o menu no mobile */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0a4d68;
+    width: 100%;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: #0a4d68;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+}
+
+/* No desktop, menu sempre visível */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 20px;
+  }
+}
