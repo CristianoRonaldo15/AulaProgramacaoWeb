@@ -1,0 +1,150 @@
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* main.css — Consolidado: reset + design system + layout + components
+   Use this file to restore layout and keep structured variables for future modularization */
+
+/* ===========================
+   DESIGN SYSTEM / VARIÁVEIS
+   =========================== */
+:root{
+  /* Paleta */
+  --color-primary: #0a6;           /* antigo */
+  --color-primary-dark: #0a4d68;
+  --color-primary-light: #2a94b8;
+  --color-secondary: #f4a261;
+  --color-accent: #e76f51;
+  --neutral-100: #f8f9fa;
+  --neutral-200: #e9ecef;
+  --neutral-700: #495057;
+  --neutral-900: #212529;
+
+  /* Espaçamentos (modular) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Tipografia */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 2rem;
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* ===========================
+   RESET / BASE
+   =========================== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:var(--font-family);color:#222;background:#fff;font-size:var(--font-md);line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:var(--space-2)}
+a{color:inherit}
+
+/* Skiplink */
+.skiplink{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skiplink:focus{position:static;left:0;width:auto;height:auto;padding:.5rem;background:#000;color:#fff;z-index:9999}
+
+/* ===========================
+   HEADER / NAV
+   =========================== */
+.site-header{background:var(--color-primary);color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem}
+.logo{font-weight:700;color:#fff;text-decoration:none}
+.main-nav ul{list-style:none;display:flex;gap:.5rem;margin:0;padding:0}
+.main-nav a{text-decoration:none;color:inherit;padding:.4rem .6rem;border-radius:6px}
+.main-nav a:hover,.main-nav a:focus{background:rgba(255,255,255,0.12);outline:none}
+
+/* Menu toggle - hamburger look optional */
+.menu-toggle{display:none;background:transparent;border:0;color:inherit;cursor:pointer;padding:.4rem .6rem;border-radius:6px}
+
+/* Mobile nav (hidden by default) */
+@media (max-width:768px){
+  .main-nav ul{display:none;flex-direction:column;background-color:var(--color-primary-dark);width:100%;margin-top:var(--space-2);padding:var(--space-2)}
+  .main-nav ul.active{display:flex}
+  .menu-toggle{display:block;background-color:var(--color-primary-dark);color:#fff;border:none;padding:10px 15px;cursor:pointer}
+  .header-inner{flex-wrap:wrap}
+}
+
+/* Desktop keep nav horizontal */
+@media (min-width:769px){
+  .main-nav ul{display:flex;gap:20px}
+  .menu-toggle{display:none}
+}
+
+/* ===========================
+   HERO / ABOUT / CARDS
+   =========================== */
+.hero{display:block;margin:var(--space-2) 0}
+.hero-content{padding:var(--space-2) 0}
+.hero-media img{width:100%;height:auto;border-radius:8px}
+
+/* Cards grid */
+.cards{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:var(--space-2)}
+.card{background:#f7f7f7;padding:var(--space-2);border-radius:8px}
+
+/* Buttons */
+.btn{display:inline-block;text-decoration:none;padding:.6rem 1rem;border-radius:8px;background:var(--color-primary);color:#fff;border:none;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid var(--color-primary);color:var(--color-primary)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* ===========================
+   PROJECTS / CARDS LIST
+   =========================== */
+.project-cards{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
+.project-card{display:flex;gap:1rem;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05);padding:.5rem;align-items:center}
+.project-card img{width:120px;height:80px;object-fit:cover;border-radius:6px}
+
+/* make project cards responsive: stack on small screens */
+@media (max-width:600px){
+  .project-card{flex-direction:column;align-items:stretch}
+  .project-card img{width:100%;height:auto}
+}
+
+/* ===========================
+   FORMS
+   =========================== */
+form{background:#fff;padding:var(--space-2);border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.03)}
+label{display:block;margin-top:.6rem;font-weight:600}
+input,select,textarea{width:100%;padding:.6rem;border:1px solid #dcdcdc;border-radius:6px;margin-top:.25rem}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(10,109,104,0.12);border-color:var(--color-primary)}
+.fieldset{border:none;margin:0;padding:0}
+
+/* Validation visual (basic) */
+input:invalid{outline:2px solid rgba(230,111,81,0.18);border-color:var(--color-accent)}
+input[disabled],select[disabled]{background:#f3f3f3}
+
+/* ===========================
+   FOOTER / MISC
+   =========================== */
+.site-footer{margin-top:var(--space-4);padding:var(--space-2) 0;background:#f3f3f3}
+.site-footer a{color:inherit}
+
+/* metrics and layout */
+.metrics{display:flex;gap:var(--space-3);list-style:none;padding:0}
+.metrics li{display:flex;flex-direction:column;align-items:center}
+
+/* Grid for larger layouts (12-column simplified) */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-3)}
+/* responsive adjustments */
+@media (max-width:1200px){.grid{grid-template-columns:repeat(8,1fr)}}
+@media (max-width:992px){.grid{grid-template-columns:repeat(6,1fr)}}
+@media (max-width:768px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:576px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:400px){.grid{grid-template-columns:1fr}}
+
+/* small utility classes */
+.text-center{text-align:center}
+.mb-1{margin-bottom:var(--space-1)}
+.mb-2{margin-bottom:var(--space-2)}
+.hidden{display:none}
+
+/* ===========================
+   TRANSITIONS / ACCESSIBILITY
+   =========================== */
+button, .btn, a{transition:all .18s ease}
+:focus{outline:3px solid rgba(42,148,184,0.18);outline-offset:2px}

@@ -1,0 +1,46 @@
+/* Layout principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-2);
+}
+
+.site-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Sistema de grid customizado (12 colunas) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(8, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 576px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+  .grid { grid-template-columns: 1fr; }
+}
